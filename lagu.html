@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://i.pinimg.com/736x/98/53/cc/9853cc5dcbc338ee286f604e563c503b.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.041);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 50%;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 15px;
+            background: linear-gradient(to right, #4a47a3, #1f1c2c);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        .button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(to right, #1f1c2c, #4a47a3);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .credit a {
+            color: white;
+            text-decoration: none;
+        }
+        .credit:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Rekomendasi Lagu Sedih</h2>
+        <p>kamu pingin dengerin lagu apa nih! yang nyaman kamu dengerin...</p>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWVrtsSlLKzro" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <br>
+        <a href="index.html" class="button">Kembali</a>
+    </div>
+    <div class="credit">
+        Dibuat oleh <a href="https://www.instagram.com/alimisadn_/" target="_blank">@alimisadn_</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curhat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://i.pinimg.com/736x/8e/91/8c/8e918c291182cf43002c1667872d94d6.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.096);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 60%;
+        }
+        .typing {
+            font-size: 22px;
+            font-style: italic;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid white;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 15px;
+            border-radius: 12px;
+            border: none;
+            background: rgba(255, 255, 255, 0.493);
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            resize: none;
+            outline: none;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 15px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        .button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .credit a {
+            color: white;
+            text-decoration: none;
+        }
+        .credit:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="typing">"Kadang, kata-kata adalah satu-satunya yang mengerti..."</h2>
+        <textarea id="curhatan" placeholder="ceritain semuanya disini..."></textarea>
+        <button class="button" onclick="kirimCurhat()">biar aku simpan</button>
+        <p id="pesan" style="color: lightgreen; display: none;"></p>
+        <br>
+        <a href="index.html" class="button">Kembali</a>
+    </div>
+    <div class="credit">
+        Dibuat oleh <a href="https://www.instagram.com/alimisadn_/" target="_blank">@alimisadn_</a>
+    </div>
+    <script>
+        function kirimCurhat() {
+            let curhat = document.getElementById('curhatan').value.toLowerCase();
+            let pesan = "jangan sedih lagi ya, kan ada aku disini.";
+            if (curhat.includes("sedih") || curhat.includes("kecewa")) {
+                pesan = "kamu gak sendirian ko! aku ada disini.";
+            } else if (curhat.includes("bahagia") || curhat.includes("senang")) {
+                pesan = "aku cuma ingin lihat kamu bahagia";
+            }
+            document.getElementById('pesan').innerText = pesan;
+            document.getElementById('pesan').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

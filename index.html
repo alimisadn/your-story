@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Curhatan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://i.pinimg.com/736x/bd/62/40/bd624059511a276dcd77928488a72009.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            background: linear-gradient(45deg, #4a90e2, #5c98d9);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 15px rgba(74, 144, 226, 0.5);
+        }
+        .typing {
+            font-size: 18px;
+            font-style: italic;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid white;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+        .credit a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .credit:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+        }
+        .bio-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        .bio-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="biodata.html" class="bio-button">📜 Biodata</a>
+
+    <div class="container">
+        <h1>hi! kamu kenapa? ceritain semuanya ke aku</h1>
+        <p class="typing">"Kadang, gak semua orang bisa mendengarkan kita..."</p>
+        <a href="curhat.html" class="button">💬 Curhat</a>
+        <a href="lagu.html" class="button">🎵 Lagu</a>
+    </div>
+
+    <div class="credit">
+        Dibuat oleh <a href="https://www.instagram.com/alimisadn_/" target="_blank">@alimisadn_</a>
+    </div>
+</body>
+</html>
